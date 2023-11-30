@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta:wght@500&family=Poppins:wght@200&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mukta:wght@500&family=Oswald&family=Poppins:wght@200&family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -42,16 +43,16 @@ lheader{
     top: 0;
     background-color: white;
 }
-lheader i, .list i{
-    font-size: 25px;
+.list i{
+    font-size: 23px;
 }
 .list i,.list img{
     margin-right: 25px;
 }
 .list img{
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
 }
 .hov h1{
@@ -61,6 +62,9 @@ lheader i, .list i{
     bottom: 10px;
     color: blue;
 }
+.hlogo i,.navbar i{
+    font-size: 35px;
+}
 .hlogo{
     display: flex;
     align-items: center;
@@ -68,6 +72,8 @@ lheader i, .list i{
 }
 .hlogo h2{
     font-size: 20px;
+    font-family: Oswald;
+    color: rgba(0, 0, 0, 0.877);
 }
 .leftbar .hov{
     padding: 6px 6px;
@@ -98,7 +104,7 @@ lheader i, .list i{
     padding-bottom: 10px;
     width: 90%;
     margin-inline: auto;
-    border-bottom: 1px solid rgb(173, 172, 172);
+    border-bottom: 0.5px solid rgba(173, 172, 172, 0.5);
 }
 .hov,.you{
     transition: all 0.2s;
@@ -107,6 +113,9 @@ lheader i, .list i{
         cursor: pointer;
         background-color: rgba(243, 240, 240, 0.884);
     }
+}
+.home{
+    background-color: rgba(243, 240, 240, 0.884);
 }
 /*Right Side Header Code*/
 .rightcon{
@@ -155,13 +164,26 @@ rheader{
     border-radius: 50%;
     padding: 5px;
     background-color: rgba(243, 240, 240, 0.884);
+    &:hover{
+        box-shadow: inset 0px 0px 25px 0px rgb(212, 204, 204);
+    }
 }
 .rtop .video{
     margin-left: 180px;
-    margin-right: 30px;
+    margin-right: 15px;
+    padding: 5px;
+    border-radius: 50%;
+    &:hover{
+        box-shadow: inset 0px 0px 25px 0px rgb(212, 204, 204);
+    }
 }
 .bell{
     margin-right: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    &:hover{
+        box-shadow: inset 0px 0px 25px 0px rgb(212, 204, 204);
+    }
 }
 .prof{
     padding: 5px 10px;
@@ -182,7 +204,10 @@ rheader{
     border-right: none;
     border-bottom: none;
     border-top: none;
-    background-color: rgba(243, 240, 240, 0.884);
+    background-color: rgba(243, 240, 240, 0.616);
+    &:hover{
+        box-shadow: inset 0px 0px 25px 0px rgb(212, 204, 204);
+    }
 }
 .rbot{
     padding-bottom: 10px;
@@ -206,18 +231,24 @@ rheader{
     background-color: rgba(243, 240, 240, 0.884);
     color: rgb(37, 36, 36);
     cursor: pointer;
+    &:hover{
+        box-shadow: inset 0px 0px 25px 0px rgb(221, 215, 215);
+    }
 }
 #all{
     background-color: black;
     color: white;
+    &:hover{
+        box-shadow: none;
+    }
 }
 /*Right Side Content Code*/
 .rmain{
-    margin-top: 110px;
+    margin-top: 100px;
     position: fixed;
     padding-left: 7px;
     width: 81%;
-    height: 83%;
+    height: 85%;
     /*
     &:hover{
         overflow-y:initial;
@@ -233,10 +264,11 @@ rheader{
     row-gap: 40px;
     column-gap: 15px;
     margin-top: 45px;
+    width: 97%;
 }
 .yshort{
     margin-top: 40px;
-    border-bottom: 1px solid rgb(173, 172, 172);
+    border-bottom: 0.5px solid rgb(173, 172, 172,0.5);
 }
 .title{
     display: flex;
@@ -249,24 +281,39 @@ rheader{
 .short-grid{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(1,400px);
+    grid-template-rows: repeat(1,450px);
     gap: 15px;
     margin-top: 30px;
 }
-.sgriditem{
-    border: 2px solid black;
-}
 .griditem{
-    border: 2px solid black;
+    &:hover{
+        .yvid-img{
+            border-radius: 0px;
+        }
+        .bx-dots-vertical-rounded{
+            font-size: 25px;
+        }
+        .yvid-duration{
+            font-size: 13px;
+        }
+        .yvid-time{
+            font-size: 0px;
+            background-color: transparent;
+        }
+        .yvid-logos{
+            font-size: 25px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
 }
 .showmore{
     display: flex;
     align-items: center;
-    border: 1px solid rgb(173, 172, 172);
+    border: 0.5px solid rgb(173, 172, 172,0.5);
     width: fit-content;
     padding: 5px 120px;
     position: relative;
-    top: 25px;
+    top: 20px;
     left: 370px;
     background-color: white;
     border-radius: 30px;
@@ -277,4 +324,154 @@ rheader{
 }
 .showmore i{
     font-size: 25px;
+}
+/*Youtube video grid code*/
+.yvid-img{
+    height: 65%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s;
+}
+.bx-dots-vertical-rounded{
+    font-size: 0px;
+    margin-left: 30px;
+}
+.yvid-img-1{
+    background-image: url(https://htmlburger.com/blog/wp-content/uploads/2021/08/website-layout-ideas-826x464.png);
+}
+.yvid-img-2{
+    background-image: url(bas.jpg);
+}
+.yvid-img-3{
+    background-image: url(https://media.cnn.com/api/v1/images/stellar/prod/230621042149-01-cristiano-ronaldo-euro-200-apps-062023-restricted.jpg?c=original);
+}
+.yvid-img-4{
+    background-image: url(https://prod-ne-cdn-media.puregym.com/media/819394/gym-workout-plan-for-gaining-muscle_header.jpg?quality=80);
+}
+.yvid-img-5{
+    background-image: url(https://www.pahomepage.com/wp-content/uploads/sites/91/2019/12/5765a11c7bbc4c51aa93e7ae78c8e65c.jpg);
+}
+.yvid-img-6{
+    background-image: url(https://cdn-developer-wp.arc.dev/wp-content/uploads/2021/08/Adham-Dannaway-home.jpg);
+}
+.yvid-img-7{
+    background-image: url(https://images2.minutemediacdn.com/image/upload/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/shape/cover/sport/646987-jasin-boland-c-2012-warner-bros-entertainment-inc-54e2f8c553776eafbfd8ede11121a700.jpg);
+}
+.yvid-img-8{
+    background-image: url(https://i.ytimg.com/vi/vcsSc2iksC0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC_157vdrDWeVMgSG3zDQbZX5WptA);
+}
+.yvid-img-9{
+    background-image: url(https://focus3.com/wp-content/uploads/2020/01/Today_is_the_most_important.jpg);
+}
+.yvid-img-10{
+    background-image: url(https://www.theforage.com/blog/wp-content/uploads/2023/03/Main-Article-Images-1024x768.jpg);
+}
+.yvid-img-11{
+    background-image: url(https://www.salesforce.com/content/dam/blogs/ca/Blog%20Posts/a-day-in-the-life-of-a-sales-manager-open-graph.png);
+}
+.yvid-img-12{
+    background-image: url(https://st2.depositphotos.com/5123557/11837/i/450/depositphotos_118377990-stock-photo-silhouette-of-businessman-standing-on.jpg);
+}
+.yvid-time{
+    display: inline;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    position: sticky;
+    top: 100%;
+    left: 100%;
+    font-size: 13px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+}
+.yvid-duration{
+    display: inline;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    position: sticky;
+    top: 100%;
+    right: 100%;
+    font-size: 0px;
+    background-color: transparent;
+    color: white;
+    transition: all 0.5s;
+}
+.yvid-logos{
+    display: inline-flex;
+    position: sticky;
+    bottom: 100%;
+    left: 100%;
+    background-color: transparent;
+    font-size: 0;
+    padding: 5px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: all 0.5s;
+}
+.yvid-cc{
+    background-color: rgba(0, 0, 0, 0.582);
+    color: rgba(255, 255, 255, 0.829);
+    margin-left: 5px;
+    border-left: 0.5px solid white;
+}
+.yvid-mute{
+    background-color: rgba(255, 255, 255, 0.829);
+}
+.yvid-prof{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+.yvid-detail,.yvid-num,.yvid-name{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+.yvid-cap{
+    font-weight: bolder;
+}
+.yvid-point{
+    font-weight: bolder;
+    margin-inline: 5px;
+}
+.yvid-name,.yvid-num{
+    margin-left: 40px;
+    font-size: 15px;
+}
+.bxs-check-circle{
+    margin-left: 5px;
+}
+/*Youtube short grid code*/
+.yshort-img{
+    height: 80%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+}
+.yshort-img-1{
+    background-image: url(https://www.jackreacher.com/wp-content/uploads/2020/08/Meet-the-new-Reacher_header-1-1024x801.png);
+}
+.yshort-img-2{
+    background-image: url(https://d3rqy6w6tyyf68.cloudfront.net/AcuCustom/Sitename/DAM/032/Hazard.png);
+}
+.yshort-img-3{
+    background-image: url(https://m.media-amazon.com/images/I/71SqIY+OdmL._AC_UF894,1000_QL80_.jpg);
+}
+.yshort-img-4{
+    background-image: url(https://www.marketplace.org/wp-content/uploads/2023/04/USdollar.jpg?w=600);
+}
+.yshort-img-5{
+    background-image: url(https://www.setforset.com/cdn/shop/articles/long_head_bicep_exercises_2000x.jpg?v=1634891114);
+}
+.yshort-cap{
+    margin-top: 10px;
+    font-weight: bolder;
+}
+.yshort-view{
+    margin-top: 10px;
+    font-size: 15px;
 }

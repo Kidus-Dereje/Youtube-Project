@@ -32,6 +32,9 @@ main{
 }
 .navbar{
     margin-left: 20px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 lheader{
     width: 100%;
@@ -116,6 +119,18 @@ lheader{
 }
 .home{
     background-color: rgba(243, 240, 240, 0.884);
+}
+.disappearing-ul{
+    display: none;
+}
+.list p{
+    font-size: 11px;
+}
+.list .disappearing-p{
+    font-size: 14px;
+}
+.dis-none{
+    display: none;
 }
 /*Right Side Header Code*/
 .rightcon{
@@ -474,4 +489,20 @@ rheader{
 .yshort-view{
     margin-top: 10px;
     font-size: 15px;
+}
+/*Javascript style*/
+.appear{
+    display: block;
+}
+.disappear{
+    display: none;
+}
+.transform{
+    transform: translateX(-120px);
+}
+.rows{
+    grid-template-rows: repeat(2, 350px);
+}
+.width{
+    width: 89%;
 }
